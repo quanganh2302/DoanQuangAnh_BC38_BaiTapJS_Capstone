@@ -1,0 +1,33 @@
+@import "../Componentes/button";
+
+// --> Header 
+// --> Top header 
+.header{
+    .top-header{
+        background-color: #263c97;
+        .container{
+            .row{
+                .top-header-left{                   
+                    ul{
+                        li{
+                            display: inline-block;
+                            a{
+                                @include text($color-text-header,$fs-sm,400);
+                            }
+                        }
+                    }
+                }
+                .top-header-right{
+                    color: white;
+                }
+            }
+        }
+    }
+    .middle-header{
+
+    }
+    .botton-header{
+
+    }
+
+}

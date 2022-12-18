@@ -1,0 +1,21 @@
+@import "../Helpers/mixin";
+
+.btn-buy{
+    @include btn(0,40px,$color-btn,$color-text-btn-buy,$fs-sm,400);
+    width: 100%;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-info{
+    margin-top: 10px;
+    border: 1px solid #ebebeb;
+    @include btn(0,30px,#fff,$color-text-btn-info,$fs-sm,400);
+    width: 100%;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+

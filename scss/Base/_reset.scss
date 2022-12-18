@@ -3,16 +3,24 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    font-size: 14px;
 }
 
 .container{
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
-    background-color: red;
-    @media only screen and (min-width: 1430px) {
-        max-width: 1430px;
-        background-color: pink;
+    @media only screen and (min-width: 1200px) {
+        max-width: 1170px;
     }
+    @media only screen and (min-width: 1230px) {
+        max-width: 1200px;
+    }
+    @media only screen and (min-width: 1410px) {
+        max-width: 1410px;
+    }
+}
 
+a{
+    text-decoration: none;
 }

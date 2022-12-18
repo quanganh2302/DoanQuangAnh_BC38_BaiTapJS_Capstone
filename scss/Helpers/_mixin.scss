@@ -1,0 +1,21 @@
+@import "./variables";
+
+
+@mixin text($co:$color-main,$fs:$fs-df,$fw:300){
+    color: $co;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin text-btn($co:$color-main,$fs:$fs-df,$fw:400){
+    color: $co;
+    font-size: $fs;
+    font-weight: $fw;
+};
+
+@mixin btn($pd:0,$ra,$bg,$co,$fs,$fw){
+    @include text-btn($co,$fs,$fw);
+    padding: $pd;
+    border-radius: $ra;
+    background: $bg;
+};
