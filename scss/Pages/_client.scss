@@ -1,33 +1,194 @@
 @import "../Componentes/button";
 
-// --> Header 
-// --> Top header 
-.header{
-    .top-header{
-        background-color: #263c97;
-        .container{
-            .row{
-                .top-header-left{                   
-                    ul{
-                        li{
-                            display: inline-block;
-                            a{
-                                @include text($color-text-header,$fs-sm,400);
+// --> Header
+// --> Top header
+.header {
+    background-color: #263c97;
+  .top-header {
+    line-height: 15px;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.15);
+    .container {
+      .row {
+        align-items: center;
+        .top-header-left {
+          ul {
+            padding: 0;
+            margin: 0;
+            li {
+              display: inline-block;
+              padding: 0 20px;
+              @include text($color-text-header, $fs-sm, 400);
+              a {
+                @include text($color-text-header, $fs-sm, 400);
+                line-height: 35px;
+              }
+            }
+            li.item-list {
+              position: relative;
+              &::after {
+                content: "";
+                background-color: rgba(245, 245, 245, 0.15);
+                position: absolute;
+                left: 0;
+                top: 10px;
+                width: 1px;
+                height: 15px;
+              }
+            }
+            li:first-of-type {
+              padding-left: 0;
+            }
+          }
+        }
+        .top-header-right {
+          ul 
+          {
+            text-align: right;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            line-height: 35px;
+            li {
+              display: inline-block;
+              position: relative;
+              padding: 0 15px;
+              a {
+                text-transform: capitalize;
+                @include text($color-text-header, $fs-sm, 400);
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                background-color: rgba(245, 245, 245, 0.15);
+                height: 15px;
+                width: 1px;
+                top: 10px;
+                right: 0;
+                
+              }
+            }
+            li:last-of-type{
+                padding-right: 0;
+                &::after{
+                    display: none;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+  .middle-header {
+    .container{
+        border-bottom: 1px solid rgba(245, 245, 245, 0.15);
+        .row{
+            align-items: center;
+            .header-logo{
+                img{
+                    max-width: 200px;
+                    width: auto;
+                    height: auto;
+                }
+            }
+            .header-search{
+                padding: 29px 45px 29px 15px;
+                form{
+                    .input-group{
+                        background-color: #fff;
+                        border-radius: 3px;
+                        border: none;
+                        position: relative;
+                        .btn.dropdown-toggle{
+                        border: none;
+                        height: 50px;
+                        min-width: 154px;
+                        color: $color-text-main;
+                        &:hover{
+                            background-color: transparent;
+                            color: $color-text-main;
+                            cursor: default;
+                        }
+                        }
+                        .form-control{
+                        border-radius: 0 3px 3px 0;
+
+                        }
+                        .btn-search{
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            height: 42px;
+                            width: 42px;
+                            margin: 4px;
+                            background-color: $color-btn;
+                            border: none;
+                            border-radius: 3px;
+                            i{
+                                color: #fff;
+                                font-size: 20px;
+                                line-height: 42px;
+                            }
+                            &:hover{
+                            background-color: $color-btn-hover;
                             }
                         }
                     }
                 }
-                .top-header-right{
-                    color: white;
+
+            }
+            .header-control{
+                ul{
+                    list-style: none; 
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        display: inline-block ;
+                        padding: 0 10px;
+                        a{
+                            position: relative;
+                            line-height: 1;
+                            color: $color-text-header;
+                            text-transform: capitalize;
+                            i{
+                                position: absolute;
+                                left: 0;
+                                font-size: 28px;
+                                color: $color-text-header;
+                                line-height: 1;
+                            }
+                            span{
+                                padding-left: 40px;
+                                display: block;
+                                font-size: 13px;
+                                margin-bottom: 3px;
+                            }
+                            .text-color-di{
+                                color: #a3afef;
+                            }
+                            .favorite-count,.cart-count{
+                                position: absolute;
+                                background-color: $color-btn;
+                                font-size: 11px;
+                                color: $color-text-header;
+                                font-weight: 400;
+                                height: 20px;
+                                width: 20px;
+                                line-height: 20px;
+                                border-radius: 50%;
+                                text-align: center;
+                                padding: 0;
+                                top: -10px;
+                                left: 17px;
+                            }
+                        }
+                    }
                 }
             }
+
         }
     }
-    .middle-header{
-
-    }
-    .botton-header{
-
-    }
-
+  }
+  .botton-header {
+    height: 30px;
+  }
 }
