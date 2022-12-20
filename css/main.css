@@ -37,12 +37,12 @@ a {
 }
 
 .btn-buy {
-  color: #fff;
+  color: #222;
   font-size: 13px;
   font-weight: 400;
   padding: 0;
   border-radius: 40px;
-  background: #16bcdc;
+  background: #fcbe00;
   width: 100%;
   line-height: 40px;
   text-decoration: none;
@@ -139,9 +139,6 @@ a {
 .header .top-header .container .row .top-header-right ul li:last-of-type::after {
   display: none;
 }
-.header .middle-header .container {
-  border-bottom: 1px solid rgba(245, 245, 245, 0.15);
-}
 .header .middle-header .container .row {
   align-items: center;
 }
@@ -180,17 +177,17 @@ a {
   height: 42px;
   width: 42px;
   margin: 4px;
-  background-color: #16bcdc;
+  background-color: #fcbe00;
   border: none;
   border-radius: 3px;
 }
 .header .middle-header .container .row .header-search form .input-group .btn-search i {
-  color: #fff;
+  color: #222;
   font-size: 20px;
   line-height: 42px;
 }
 .header .middle-header .container .row .header-search form .input-group .btn-search:hover {
-  background-color: #14a8c5;
+  background-color: #fcb200;
 }
 .header .middle-header .container .row .header-control ul {
   list-style: none;
@@ -223,9 +220,10 @@ a {
 .header .middle-header .container .row .header-control ul li a .text-color-di {
   color: #a3afef;
 }
-.header .middle-header .container .row .header-control ul li a .favorite-count, .header .middle-header .container .row .header-control ul li a .cart-count {
+.header .middle-header .container .row .header-control ul li a .favorite-count,
+.header .middle-header .container .row .header-control ul li a .cart-count {
   position: absolute;
-  background-color: #16bcdc;
+  background-color: #fcbe00;
   font-size: 11px;
   color: #fff;
   font-weight: 400;
@@ -238,6 +236,32 @@ a {
   top: -10px;
   left: 17px;
 }
-.header .botton-header {
-  height: 30px;
+.header .middle-header .container .row .line {
+  border-bottom: 1px solid rgba(245, 245, 245, 0.15);
+}
+.header .bottom-header .container .row {
+  align-items: center;
+}
+.header .bottom-header .container .row .header-menu .dropdown .btn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+}
+.header .bottom-header .container .row .header-menu .dropdown .btn i {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+}
+.header .bottom-header .container .row .header-menu .dropdown .btn span {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 2;
+}
+.header .bottom-header .container .row .header-info p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
 }

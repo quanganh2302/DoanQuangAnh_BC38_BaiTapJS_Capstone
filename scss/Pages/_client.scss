@@ -3,7 +3,7 @@
 // --> Header
 // --> Top header
 .header {
-    background-color: #263c97;
+  background-color: #263c97;
   .top-header {
     line-height: 15px;
     border-bottom: 1px solid rgba(245, 245, 245, 0.15);
@@ -41,8 +41,7 @@
           }
         }
         .top-header-right {
-          ul 
-          {
+          ul {
             text-align: right;
             padding: 0;
             margin: 0;
@@ -64,14 +63,13 @@
                 width: 1px;
                 top: 10px;
                 right: 0;
-                
               }
             }
-            li:last-of-type{
-                padding-right: 0;
-                &::after{
-                    display: none;
-                }
+            li:last-of-type {
+              padding-right: 0;
+              &::after {
+                display: none;
+              }
             }
           }
         }
@@ -79,116 +77,148 @@
     }
   }
   .middle-header {
-    .container{
-        border-bottom: 1px solid rgba(245, 245, 245, 0.15);
-        .row{
-            align-items: center;
-            .header-logo{
-                img{
-                    max-width: 200px;
-                    width: auto;
-                    height: auto;
-                }
-            }
-            .header-search{
-                padding: 29px 45px 29px 15px;
-                form{
-                    .input-group{
-                        background-color: #fff;
-                        border-radius: 3px;
-                        border: none;
-                        position: relative;
-                        .btn.dropdown-toggle{
-                        border: none;
-                        height: 50px;
-                        min-width: 154px;
-                        color: $color-text-main;
-                        &:hover{
-                            background-color: transparent;
-                            color: $color-text-main;
-                            cursor: default;
-                        }
-                        }
-                        .form-control{
-                        border-radius: 0 3px 3px 0;
-
-                        }
-                        .btn-search{
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-                            height: 42px;
-                            width: 42px;
-                            margin: 4px;
-                            background-color: $color-btn;
-                            border: none;
-                            border-radius: 3px;
-                            i{
-                                color: #fff;
-                                font-size: 20px;
-                                line-height: 42px;
-                            }
-                            &:hover{
-                            background-color: $color-btn-hover;
-                            }
-                        }
-                    }
-                }
-
-            }
-            .header-control{
-                ul{
-                    list-style: none; 
-                    padding: 0;
-                    margin: 0;
-                    li{
-                        display: inline-block ;
-                        padding: 0 10px;
-                        a{
-                            position: relative;
-                            line-height: 1;
-                            color: $color-text-header;
-                            text-transform: capitalize;
-                            i{
-                                position: absolute;
-                                left: 0;
-                                font-size: 28px;
-                                color: $color-text-header;
-                                line-height: 1;
-                            }
-                            span{
-                                padding-left: 40px;
-                                display: block;
-                                font-size: 13px;
-                                margin-bottom: 3px;
-                            }
-                            .text-color-di{
-                                color: #a3afef;
-                            }
-                            .favorite-count,.cart-count{
-                                position: absolute;
-                                background-color: $color-btn;
-                                font-size: 11px;
-                                color: $color-text-header;
-                                font-weight: 400;
-                                height: 20px;
-                                width: 20px;
-                                line-height: 20px;
-                                border-radius: 50%;
-                                text-align: center;
-                                padding: 0;
-                                top: -10px;
-                                left: 17px;
-                            }
-                        }
-                    }
-                }
-            }
-
+    .container {
+      .row {
+        align-items: center;
+        .header-logo {
+          img {
+            max-width: 200px;
+            width: auto;
+            height: auto;
+          }
         }
+        .header-search {
+          padding: 29px 45px 29px 15px;
+          form {
+            .input-group {
+              background-color: #fff;
+              border-radius: 3px;
+              border: none;
+              position: relative;
+              .btn.dropdown-toggle {
+                border: none;
+                height: 50px;
+                min-width: 154px;
+                color: $color-text-main;
+                &:hover {
+                  background-color: transparent;
+                  color: $color-text-main;
+                  cursor: default;
+                }
+              }
+              .form-control {
+                border-radius: 0 3px 3px 0;
+              }
+              .btn-search {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 42px;
+                width: 42px;
+                margin: 4px;
+                background-color: $color-btn;
+                border: none;
+                border-radius: 3px;
+                i {
+                  color: $color-text-btn-buy;
+                  font-size: 20px;
+                  line-height: 42px;
+                }
+                &:hover {
+                  background-color: $color-btn-hover;
+                }
+              }
+            }
+          }
+        }
+        .header-control {
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+              display: inline-block;
+              padding: 0 10px;
+              a {
+                position: relative;
+                line-height: 1;
+                color: $color-text-header;
+                text-transform: capitalize;
+                i {
+                  position: absolute;
+                  left: 0;
+                  font-size: 28px;
+                  color: $color-text-header;
+                  line-height: 1;
+                }
+                span {
+                  padding-left: 40px;
+                  display: block;
+                  font-size: 13px;
+                  margin-bottom: 3px;
+                }
+                .text-color-di {
+                  color: #a3afef;
+                }
+                .favorite-count,
+                .cart-count {
+                  position: absolute;
+                  background-color: $color-btn;
+                  font-size: 11px;
+                  color: $color-text-header;
+                  font-weight: 400;
+                  height: 20px;
+                  width: 20px;
+                  line-height: 20px;
+                  border-radius: 50%;
+                  text-align: center;
+                  padding: 0;
+                  top: -10px;
+                  left: 17px;
+                }
+              }
+            }
+          }
+        }
+        .line{
+          border-bottom: 1px solid rgba(245, 245, 245, 0.15);
+        }
+      }
     }
   }
-  .botton-header {
-    height: 30px;
+  .bottom-header {
+    .container {
+      .row {
+        align-items: center;
+        .header-menu {
+          .dropdown {
+            .btn {
+              background-color: transparent;
+              border: none;
+              display: flex;
+              i {
+                @include text($color-text-header, 24px,600);
+                line-height: 1;
+              }
+              span {
+                @include text($color-text-header, $fs-df,600);
+                text-transform: uppercase;
+                line-height: 2;
+              }
+            }
+            .dropdown-menu {
+            }
+          }
+        }
+        .header-nav {
+        }
+        .header-info {
+          p{
+            @include text($color-text-header, $fs-df,400);
+
+          }
+        }
+      }
+    }
   }
 }
