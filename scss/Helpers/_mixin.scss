@@ -13,6 +13,20 @@
     font-weight: $fw;
 };
 
+@mixin footer-title(){
+    .title{
+    color: $color-text-footer-title;
+    font-size: $fs-title;
+    font-weight: 600;
+    margin-bottom: 10px;
+    }
+    p{
+        color: $color-text-footer;
+        font-size: $fs-df;
+        margin-bottom: 13px
+    }
+};
+
 @mixin btn($pd:0,$ra,$bg,$co,$fs,$fw){
     @include text-btn($co,$fs,$fw);
     padding: $pd;
