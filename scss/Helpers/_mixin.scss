@@ -1,35 +1,63 @@
 @import "./variables";
 
-
-@mixin text($co:$color-main,$fs:$fs-df,$fw:300){
-    color: $co;
-    font-size: $fs;
-    font-weight: $fw;
+//-->Text
+@mixin text($co: $color-main, $fs: $fs-df, $fw: 300) {
+  color: $co;
+  font-size: $fs;
+  font-weight: $fw;
 }
 
-@mixin text-btn($co:$color-main,$fs:$fs-df,$fw:400){
-    color: $co;
-    font-size: $fs;
-    font-weight: $fw;
-};
+@mixin text-btn($co: $color-main, $fs: $fs-df, $fw: 400) {
+  color: $co;
+  font-size: $fs;
+  font-weight: $fw;
+}
+//Text<--
+//-->Footer
 
-@mixin footer-title(){
-    .title{
+@mixin footer-title() {
+  .title {
     color: $color-text-footer-title;
     font-size: $fs-title;
     font-weight: 600;
     margin-bottom: 10px;
-    }
-    p{
-        color: $color-text-footer;
-        font-size: $fs-df;
-        margin-bottom: 13px
-    }
-};
+  }
+  p {
+    color: $color-text-footer;
+    font-size: $fs-df;
+    margin-bottom: 13px;
+  }
+}
 
-@mixin btn($pd:0,$ra,$bg,$co,$fs,$fw){
-    @include text-btn($co,$fs,$fw);
-    padding: $pd;
-    border-radius: $ra;
-    background: $bg;
-};
+@mixin menu-footer() {
+  h3 {
+    @include text($color-text-footer-title,$fs-title,600);
+    padding-bottom: 18px;
+  }
+  ul {
+      li {
+          margin-bottom: 11px;
+          a {
+              margin-bottom: 13px;
+              @include text($color-text-footer, $fs-df,400);
+              text-transform: capitalize;
+              transition: all .5s;
+              &:hover{
+                padding-left: 10px;
+                color: $color-text-hover;
+            }
+      }
+    }
+  }
+}
+
+//Footer<--
+
+@mixin btn($pd: 0, $ra, $bg, $co, $fs, $fw) {
+  @include text-btn($co, $fs, $fw);
+  padding: $pd;
+  border-radius: $ra;
+  background: $bg;
+  transition: all .5s;
+} ;
+

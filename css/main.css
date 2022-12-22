@@ -31,11 +31,6 @@ ul {
     max-width: 1410px;
   }
 }
-@media only screen and (min-width: 1710px) {
-  .container {
-    max-width: 1710px;
-  }
-}
 
 a {
   text-decoration: none;
@@ -48,6 +43,7 @@ a {
   padding: 0;
   border-radius: 40px;
   background: #fcbe00;
+  transition: all 0.5s;
   width: 100%;
   line-height: 40px;
   text-decoration: none;
@@ -63,6 +59,7 @@ a {
   padding: 0;
   border-radius: 30px;
   background: #fff;
+  transition: all 0.5s;
   width: 100%;
   line-height: 40px;
   text-decoration: none;
@@ -202,6 +199,7 @@ a {
   background-color: #fcbe00;
   border: none;
   border-radius: 3px;
+  transition: all 0.5s;
 }
 .header .middle-header .container .row .header-search form .input-group .btn-search i {
   color: #222;
@@ -328,6 +326,7 @@ a {
 .footer .footer-top {
   background-color: #2f3037;
   padding: 60px 0 52px;
+  line-height: 1.7;
 }
 .footer .footer-top .container .row .footer-title .title {
   color: #fff;
@@ -379,6 +378,7 @@ a {
 }
 .footer .footer-top .container .row .footer-input .input-group {
   position: relative;
+  max-width: 374px;
 }
 .footer .footer-top .container .row .footer-input .input-group input {
   border-radius: 3px 0 0 3px;
@@ -400,6 +400,7 @@ a {
   min-width: 125px;
   font-size: 12px;
   text-transform: uppercase;
+  transition: all 0.5s;
 }
 .footer .footer-top .container .row .footer-input .input-group .btn:hover {
   background-color: #fcb200;
@@ -410,4 +411,100 @@ a {
 }
 .footer .footer-top .container .row .footer-app ul li img {
   max-width: 100%;
+}
+.footer .footer-main {
+  background-color: #1e2023;
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.15);
+}
+.footer .footer-main .container .row .menu-footer h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 18px;
+}
+.footer .footer-main .container .row .menu-footer ul li {
+  margin-bottom: 11px;
+}
+.footer .footer-main .container .row .menu-footer ul li a {
+  margin-bottom: 13px;
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  transition: all 0.5s;
+}
+.footer .footer-main .container .row .menu-footer ul li a:hover {
+  padding-left: 10px;
+  color: #fcb200;
+}
+.footer .footer-main .container .row .menu-footer ul {
+  list-style: none;
+}
+.footer .footer-main .container .row .menu-footer:last-of-type p {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer .footer-main .container .row .menu-footer:last-of-type .footer-phone {
+  padding-left: 55px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  position: relative;
+}
+.footer .footer-main .container .row .menu-footer:last-of-type .footer-phone i {
+  font-size: 50px;
+  color: #fcbe00;
+  position: absolute;
+  left: 5px;
+  top: -7px;
+}
+.footer .footer-main .container .row .menu-footer:last-of-type .footer-phone span {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  line-height: 25px;
+}
+.footer .footer-main .container .row .menu-footer:last-of-type .footer-phone span a {
+  color: #fcbe00;
+  font-size: 24px;
+}
+.footer .footer-note {
+  background-color: #1e2023;
+  padding: 60px 0;
+}
+.footer .footer-note .container {
+  text-align: center;
+}
+.footer .footer-note .container .footer-link p {
+  line-height: 1;
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer .footer-note .container .footer-link p a {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 13px;
+  padding: 0 6px;
+  transition: all 0.5s;
+}
+.footer .footer-note .container .footer-link p a:hover {
+  color: #fcbe00;
+}
+.footer .footer-note .container .footer-pay {
+  margin-top: 17px;
+}
+.footer .footer-note .container .copy-right {
+  margin-top: 30px;
+}
+.footer .footer-note .container .copy-right p {
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer .footer-note .container .copy-right p span a {
+  color: #fcbe00;
 }
