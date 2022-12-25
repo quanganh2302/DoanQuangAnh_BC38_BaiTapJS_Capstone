@@ -39,15 +39,19 @@ a {
 .btn-buy {
   color: #222;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 600;
   padding: 0;
-  border-radius: 40px;
+  border-radius: 2px;
   background: #fcbe00;
   transition: all 0.5s;
   width: 100%;
   line-height: 40px;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
+}
+.btn-buy:hover {
+  background-color: #fcb200;
 }
 
 .btn-info {
@@ -55,15 +59,19 @@ a {
   border: 1px solid #ebebeb;
   color: #888;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 600;
   padding: 0;
-  border-radius: 30px;
+  border-radius: 2px;
   background: #fff;
   transition: all 0.5s;
   width: 100%;
   line-height: 40px;
   text-decoration: none;
   text-transform: uppercase;
+}
+.btn-info:hover {
+  background-color: #f6f6f6;
+  color: #222;
 }
 
 .header {
@@ -321,6 +329,206 @@ a {
   font-size: 14px;
   font-weight: 400;
   margin: 0;
+}
+
+.content {
+  margin-bottom: 50px;
+}
+.content .content-breadcrum .container .warp-breadcrum {
+  padding: 25px 0;
+}
+.content .content-breadcrum .container .warp-breadcrum a {
+  color: #999;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.content .content-breadcrum .container .warp-breadcrum span {
+  color: #222222;
+}
+.content .content-main .container .content-filter-form .filter-form .row .number-product p {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 400;
+}
+.content .content-main .container .content-filter-form .filter-form .row .control-button a {
+  color: #999999;
+  padding: 0 10px;
+}
+.content .content-main .container .content-filter-form .filter-form .row .control-button a:hover {
+  color: #fcb200;
+}
+.content .content-main .container .content-filter-form .filter-form .row .soft-product {
+  display: flex;
+  justify-content: flex-end;
+}
+.content .content-main .container .content-filter-form .filter-form .row .soft-product .sort-form {
+  position: relative;
+}
+.content .content-main .container .content-filter-form .filter-form .row .soft-product .sort-form .row {
+  align-items: center;
+}
+.content .content-main .container .content-filter-form .filter-form .row .soft-product .sort-form .row label {
+  position: absolute;
+  display: block;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  right: 165px;
+  width: 71px;
+  padding: 0;
+}
+.content .content-main .container .content-filter-form .filter-form .row .soft-product .sort-form .row .select {
+  width: 200px;
+}
+.content .content-main .container .content-filter-form .filter-form .row .soft-product .sort-form .row .select select option {
+  overflow: hidden;
+}
+.content .content-main .container .content-filter-form .content-wrapper-desktop {
+  border: 1px solid #e8e8e8;
+  display: flex;
+}
+.content .content-main .container .content-filter-form .content-wrapper-desktop .item {
+  display: inline-block;
+  border-right: 1px solid #e8e8e8;
+  height: 50px;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 600;
+}
+.content .content-main .container .content-filter-form .content-wrapper-desktop .item details summary {
+  padding: 0 15px;
+}
+.content .content-main .container .content-filter-form .content-wrapper-desktop .item details summary span {
+  line-height: 50px;
+}
+.content .content-main .container .content-filter-form .content-wrapper-desktop .item:first-child {
+  padding: 0 15px;
+}
+.content .content-main .container .content-filter-form .content-wrapper-desktop .item:first-child p {
+  line-height: 50px;
+}
+.content .content-main .container .content-filter-form .content-product .card {
+  border-right: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 0;
+  padding: 20px;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content {
+  transition: all 0.5s;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-top {
+  height: 300px;
+  position: relative;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-top .product-img {
+  background-image: url(../../image/AirPods3.jpg);
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-top .product-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  transition: all 0.5s ease;
+  transform: translateY(300px);
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-top .product-label {
+  line-height: 10px;
+  background-color: #5aab19;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 50px;
+  padding: 5px;
+  border-radius: 2px;
+  top: 0;
+  left: 0.75rem;
+  text-align: center;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-button .product-name {
+  min-height: 32px;
+  margin-bottom: 20px;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-button .product-name a {
+  color: #0068c9;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-button .product-evaluate {
+  margin-bottom: 6px;
+  display: block;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-button .product-evaluate i {
+  color: #ffa200;
+  letter-spacing: 0;
+  line-height: 14px;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-button .current {
+  color: #cc1414;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  padding-right: 5px;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-button .compare {
+  color: #A4a4a4;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content .content-button .product-btn {
+  margin-top: 10px;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content:hover .content-top {
+  height: 300px;
+  position: relative;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content:hover .content-top .product-img {
+  background-image: url(../../image/AirPods3-second.jpg);
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content:hover .content-top .product-img::before {
+  content: "";
+  transform: translateY(0);
+}
+.content .content-main .container .content-filter-form .content-product .card .card-content:hover .content-top .product-label {
+  line-height: 10px;
+  background-color: #5aab19;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  display: inline-block;
+  position: absolute;
+  height: 20px;
+  width: 50px;
+  padding: 5px;
+  border-radius: 2px;
+  top: 0;
+  left: 0.75rem;
+  text-align: center;
+}
+.content .content-footer p {
+  color: #4f4f4f;
+  font-size: 13px;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .footer .footer-top {

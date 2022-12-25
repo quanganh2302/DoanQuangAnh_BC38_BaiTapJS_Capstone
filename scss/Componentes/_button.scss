@@ -1,21 +1,29 @@
 @import "../Helpers/mixin";
 
 .btn-buy{
-    @include btn(0,40px,$color-btn,$color-text-btn-buy,$fs-sm,400);
+    @include btn(0,2px,$color-btn,$color-text-btn-buy,$fs-sm,600);
     width: 100%;
     line-height: 40px;
     text-decoration: none;
     text-transform: uppercase;
+    border: none;
+    &:hover{
+        background-color: $color-btn-hover;
+    }
 }
 
 .btn-info{
     margin-top: 10px;
     border: 1px solid #ebebeb;
-    @include btn(0,30px,#fff,$color-text-btn-info,$fs-sm,400);
+    @include btn(0,2px,#fff,$color-text-btn-info,$fs-sm,600);
     width: 100%;
     line-height: 40px;
     text-decoration: none;
     text-transform: uppercase;
+    &:hover{
+        background-color: #f6f6f6;
+        color: $color-text-btn-buy;
+    }
 }
 
 

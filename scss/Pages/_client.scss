@@ -138,7 +138,7 @@
                 background-color: $color-btn;
                 border: none;
                 border-radius: 3px;
-                transition: all .5s;
+                transition: all 0.5s;
                 i {
                   color: $color-text-btn-buy;
                   font-size: 20px;
@@ -276,6 +276,226 @@
   }
   // Bottom header <--
 }
+//--->Content
+.content {
+  margin-bottom: 50px;
+  .content-breadcrum {
+    .container {
+      .warp-breadcrum {
+        padding: 25px 0;
+        a {
+          color: #999;
+          font-size: $fs-df;
+          text-transform: capitalize;
+        }
+        span {
+          color: $color-text-main;
+        }
+      }
+    }
+  }
+  .content-main {
+    .container {
+      .content-filter-form {
+        .filter-form {
+          .row {
+            .number-product {
+              p {
+                @include text($color-text-main, 16px, 400);
+              }
+            }
+            .control-button {
+              a {
+                color: #999999;
+                padding: 0 10px;
+                &:hover {
+                  color: $color-text-hover;
+                }
+              }
+            }
+            .soft-product {
+              display: flex;
+              justify-content: flex-end;
+              .sort-form {
+                position: relative;
+                .row {
+                  align-items: center;
+                  label {
+                    position: absolute;
+                    display: block;
+                    @include text($color-text-main, 14px, 600);
+                    line-height: 1;
+                    right: 165px;
+                    width: 71px;
+                    padding: 0;
+                  }
+                  .select {
+                    select {
+                      option {
+                        overflow: hidden;
+                      }
+                    }
+                    width: 200px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .content-wrapper-desktop {
+          border: 1px solid #e8e8e8;
+          display: flex;
+          .item {
+            display: inline-block;
+            border-right: 1px solid #e8e8e8;
+            height: 50px;
+            @include text($color-text-main, $fs-df, 600);
+            details {
+              summary {
+                padding: 0 15px;
+                span {
+                  line-height: 50px;
+                }
+              }
+            }
+          }
+          .item:first-child {
+            padding: 0 15px;
+            p {
+              line-height: 50px;
+            }
+          }
+        }
+        .content-product {
+          .card {
+            border-right: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+            margin-bottom: 0;
+            padding: 20px;
+            .card-content {
+              transition: all .5s;
+              .content-top {
+                height: 300px;
+                position: relative;
+                //-->Image product
+                .product-img {
+                  background-image: url(../../image/AirPods3.jpg);
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center;
+                  position: relative;
+                  overflow: hidden;
+
+                  &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(255,255,255,.2);
+                    z-index: 2;
+                    transition: all .5s ease;
+                    transform: translateY(300px);
+                  }
+                }
+                //Image product<--
+                .product-label {
+                  line-height: 10px;
+                  background-color: $color-label-sale;
+                  @include text(#fff, 12px, 300);
+                  display: inline-block;
+                  position: absolute;
+                  height: 20px;
+                  width: 50px;
+                  padding: 5px;
+                  border-radius: 2px;
+                  top: 0;
+                  left: 0.75rem;
+                  text-align: center;
+                }
+              }
+              //-->Bottom card product 
+              .content-button {
+                .product-name {
+                  min-height: 32px;
+                  margin-bottom: 20px;
+                  a {
+                    @include text($color-name-product, $fs-df, 600);
+                    line-height: 16px;
+                  }
+                }
+                .product-evaluate {
+                  margin-bottom: 6px;
+                  display: block;
+                  i {
+                    color: $color-star-product;
+                    letter-spacing: 0;
+                    line-height: 14px;
+                  }
+                }
+                .current {
+                  @include text($color-price-product, 16px, 600);
+                  letter-spacing: 0.6px;
+                  padding-right: 5px;
+                }
+                .compare {
+                  @include text($color-compare-product, $fs-df, 400);
+                  text-decoration: line-through;
+                }
+                .product-btn {
+                  margin-top: 10px;
+                }
+              }
+              //Bottom card product <--
+              &:hover{
+                .content-top {
+                  height: 300px;
+                  position: relative;
+                  //-->Image product
+                  .product-img {
+                    background-image: url(../../image/AirPods3-second.jpg);
+                    height: 100%;
+                    background-size: cover;
+                    background-position: center;
+                    position: relative;
+                    overflow: hidden;
+                    &::before{
+                      content: "";
+                      transform: translateY(0);
+                    }
+                  }
+                  //Image product<--
+                  .product-label {
+                    line-height: 10px;
+                    background-color: $color-label-sale;
+                    @include text(#fff, 12px, 300);
+                    display: inline-block;
+                    position: absolute;
+                    height: 20px;
+                    width: 50px;
+                    padding: 5px;
+                    border-radius: 2px;
+                    top: 0;
+                    left: 0.75rem;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-footer{
+    p{
+      @include text(#4f4f4f,$fs-sm,300);
+      font-style: italic;
+    }
+  }
+}
+//Content<--
 // --> Footer
 // --> Footer Top
 .footer {
@@ -351,7 +571,7 @@
               min-width: 125px;
               font-size: 12px;
               text-transform: uppercase;
-              transition: all .5s;
+              transition: all 0.5s;
               &:hover {
                 background-color: $color-btn-hover;
               }
@@ -431,25 +651,25 @@
             @include text($color-text-footer, $fs-df, 400);
             margin-bottom: 13px;
             padding: 0 6px;
-            transition: all .5s;
-            &:hover{
+            transition: all 0.5s;
+            &:hover {
               color: $color-text-link-hover;
             }
           }
         }
       }
-      .footer-pay{
+      .footer-pay {
         margin-top: 17px;
       }
-      .copy-right{
+      .copy-right {
         margin-top: 30px;
-        p{
+        p {
           @include text(#4f4f4f, $fs-df, 400);
-            span{
-              a{
-                color: #fcbe00;
-              }
+          span {
+            a {
+              color: #fcbe00;
             }
+          }
         }
       }
     }
