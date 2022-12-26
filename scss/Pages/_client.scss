@@ -385,7 +385,6 @@
                   background-position: center;
                   position: relative;
                   overflow: hidden;
-
                   &::before {
                     content: "";
                     position: absolute;
@@ -496,100 +495,113 @@
   }
 }
 //Content<--
-.pop {
-  padding: 30px 0 30px 15px;
-  max-width: 970px;
-  margin: 0 auto;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  background-color: #fff;
+.modalPop {
   position: fixed;
-  border-radius: 4px;
-  display: none;
+  top: 50%;
+  left: 50%;
+  width: 970px;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  .row {
-    padding-top: 20px;
-    .pop-left {
-      width: 50%;
-      img {
-        width: 100%;
+  display: none;
+  .popup {
+    position: relative;
+    background-color: #fff;
+    max-width: 970px;
+    margin: auto;
+    padding: 0;
+    border-radius: 4px;
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $color-btn;
+      transform: none;
+      opacity: 1;
+      width: 40px;
+      height: 40px;
+      transition: 0.25s;
+      border-radius: 3px;
+      a {
+        i {
+          color: $color-text-main;
+          font-size: 20px;
+          line-height: 40px;
+          font-weight: 600;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: $color-btn-hover;
       }
     }
-    .pop-right {
-      position: relative;
-      top: 0px;
-      right: 0.75rem;
-      .close {
-        a {
-          position: absolute;
-          top: -50px;
-          right: 0;
-          width: 40px;
-          height: 40px;
-          background-color: $color-btn;
-          border-radius: 4px;
-          text-align: center;
-          i {
-            @include text(#222222, 20px, 600);
-            line-height: 40px;
+    .row {
+      padding: 30px 0 30px 15px;
+      margin: 0;
+      .pop-left {
+        width: 448px;
+        img {
+          width: 100%;
+        }
+      }
+      .pop-right {
+        width: auto;
+        margin-top: 50px;
+        .product-name {
+          min-height: 32px;
+          margin-bottom: 20px;
+          a {
+            @include text($color-name-product, $fs-df, 600);
+            line-height: 16px;
           }
         }
-      }
-      .product-name {
-        min-height: 32px;
-        margin-bottom: 20px;
-        a {
-          @include text($color-name-product, $fs-df, 600);
-          line-height: 16px;
+        .product-evaluate {
+          margin-bottom: 6px;
+          display: block;
+          i {
+            color: $color-star-product;
+            letter-spacing: 0;
+            line-height: 14px;
+          }
         }
-      }
-      .product-evaluate {
-        margin-bottom: 6px;
-        display: block;
-        i {
-          color: $color-star-product;
-          line-height: 14px;
+        .current {
+          @include text($color-price-product, 16px, 600);
+          letter-spacing: 0.6px;
+          padding-right: 5px;
         }
-      }
-      .current {
-        @include text($color-price-product, 16px, 600);
-        letter-spacing: 0.6px;
-        padding-right: 5px;
-      }
-      .compare {
-        @include text($color-compare-product, $fs-df, 400);
-        text-decoration: line-through;
-      }
-      .btn-buy {
-        width: 50%;
+        .compare {
+          @include text($color-compare-product, $fs-df, 400);
+          text-decoration: line-through;
+        }
+        .desc {
+          @include text($color-text-main, $fs-df, 400);
+          margin-top: 20px;
+        }
+        .product-btn {
+          margin-top: 10px;
+        }
       }
     }
   }
 }
-.pop.show {
+.modalPop.show {
   display: block;
 }
-.overplay{
-  width: 100%;
-  height: 100%;
-  position: fixed;
+.overplay {
+  position: absolute;
   top: 0;
-  bottom: 0;
-  right: 0;
   left: 0;
-  background-color: #0b0b0b;
-  overflow: hidden;
-  opacity: .8;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.6;
   display: none;
 }
 .overplay.show{
   display: block;
 }
-
 // --> Footer
-// --> Footer Top
 .footer {
+  // --> Footer Top
   .footer-top {
     background-color: #2f3037;
     padding: 60px 0 52px;

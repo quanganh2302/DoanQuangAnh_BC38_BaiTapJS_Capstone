@@ -531,99 +531,113 @@ a {
   font-style: italic;
 }
 
-.pop {
-  padding: 30px 0 30px 15px;
-  max-width: 970px;
-  margin: 0 auto;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  background-color: #fff;
+.modalPop {
   position: fixed;
-  border-radius: 4px;
-  display: none;
+  top: 50%;
+  left: 50%;
+  width: 970px;
+  transform: translate(-50%, -50%);
   z-index: 2;
+  display: none;
 }
-.pop .row {
-  padding-top: 20px;
-}
-.pop .row .pop-left {
-  width: 50%;
-}
-.pop .row .pop-left img {
-  width: 100%;
-}
-.pop .row .pop-right {
+.modalPop .popup {
   position: relative;
-  top: 0px;
-  right: 0.75rem;
+  background-color: #fff;
+  max-width: 970px;
+  margin: auto;
+  padding: 0;
+  border-radius: 4px;
 }
-.pop .row .pop-right .close a {
+.modalPop .popup .btn-close {
   position: absolute;
-  top: -50px;
+  top: 0;
   right: 0;
+  background-color: #fcbe00;
+  transform: none;
+  opacity: 1;
   width: 40px;
   height: 40px;
-  background-color: #fcbe00;
-  border-radius: 4px;
-  text-align: center;
+  transition: 0.25s;
+  border-radius: 3px;
 }
-.pop .row .pop-right .close a i {
+.modalPop .popup .btn-close a i {
   color: #222222;
   font-size: 20px;
-  font-weight: 600;
   line-height: 40px;
+  font-weight: 600;
 }
-.pop .row .pop-right .product-name {
+.modalPop .popup .btn-close:hover {
+  cursor: pointer;
+  background-color: #fcb200;
+}
+.modalPop .popup .row {
+  padding: 30px 0 30px 15px;
+  margin: 0;
+}
+.modalPop .popup .row .pop-left {
+  width: 448px;
+}
+.modalPop .popup .row .pop-left img {
+  width: 100%;
+}
+.modalPop .popup .row .pop-right {
+  width: auto;
+  margin-top: 50px;
+}
+.modalPop .popup .row .pop-right .product-name {
   min-height: 32px;
   margin-bottom: 20px;
 }
-.pop .row .pop-right .product-name a {
+.modalPop .popup .row .pop-right .product-name a {
   color: #0068c9;
   font-size: 14px;
   font-weight: 600;
   line-height: 16px;
 }
-.pop .row .pop-right .product-evaluate {
+.modalPop .popup .row .pop-right .product-evaluate {
   margin-bottom: 6px;
   display: block;
 }
-.pop .row .pop-right .product-evaluate i {
+.modalPop .popup .row .pop-right .product-evaluate i {
   color: #ffa200;
+  letter-spacing: 0;
   line-height: 14px;
 }
-.pop .row .pop-right .current {
+.modalPop .popup .row .pop-right .current {
   color: #cc1414;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.6px;
   padding-right: 5px;
 }
-.pop .row .pop-right .compare {
+.modalPop .popup .row .pop-right .compare {
   color: #A4a4a4;
   font-size: 14px;
   font-weight: 400;
   text-decoration: line-through;
 }
-.pop .row .pop-right .btn-buy {
-  width: 50%;
+.modalPop .popup .row .pop-right .desc {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.modalPop .popup .row .pop-right .product-btn {
+  margin-top: 10px;
 }
 
-.pop.show {
+.modalPop.show {
   display: block;
 }
 
 .overplay {
-  width: 100%;
-  height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
-  bottom: 0;
-  right: 0;
   left: 0;
-  background-color: #0b0b0b;
-  overflow: hidden;
-  opacity: 0.8;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.6;
   display: none;
 }
 
