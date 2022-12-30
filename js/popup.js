@@ -1,5 +1,6 @@
 function popup(){
     document.getElementById("popup").classList.add("show");
+
 }
 
 function closeModal(){

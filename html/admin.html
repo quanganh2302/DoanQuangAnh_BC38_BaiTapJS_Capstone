@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Admin site</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+    <!-- Font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body id="popup">
+    <header class="header-admin" style="background-color: #263c97;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">Ele-shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="title">
+        <div class="container">
+            <header class="display-4 my-4">CAPSTONE JS</header>
+            <div class="list-name">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#DanhSachSP" role="tab" data-toggle="tab">Danh sách sản
+                            phẩm</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content mt-5">
+                <!--Danh sách sản phẩm -->
+                <div role="tabpanel" class="tab-pane in active" id="productList">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- BEGIN BUTTOM THÊM MỚI -->
+                            <button onclick="popup()" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                                <i class="fa fa-plus mr-1"></i>
+                                Thêm Mới
+                            </button>
+                            <!-- END BUTTON THÊM MỚI -->
+                        </div>
+                        <div class="col-md-4">
+                            <!-- BEGIN TÌM KIẾM -->
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Nhập từ khóa"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+                            <!-- END TÌM KIẾM -->
+                        </div>
+                    </div>
+                    <div class="clear-fix"></div>
+                    <div class="tblSanPham" id="tblSanPham">
+                        <!-- BEGIN TABLE SẢN PHẨM -->
+                        <table class="table table-bordered">
+                            <thead>
+                                <th>STT</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th>Giá</th>
+                                <th>Hình Ảnh</th>
+                                <th>Mô Tả</th>
+                                <th>Action</th>
+                            </thead>
+                            <tbody id="tblDanhSachSP"></tbody>
+                        </table>
+                        <!-- END TABLE SẢN PHẨM -->
+                    </div>
+                    <br />
+                </div>
+                <!-- Kết thúc danh sách sản phẩm -->
+            </div>
+        </div>
+    </div>
+
+    <!-- /Popup -->
+    <div class="modalPop admin" style=" width: 600px;">
+        <section class="popup">
+            <div onclick="closeModal()" class="btn-close">
+                <a href="">
+                </a>
+            </div>
+            <div class="modal-form">
+                <div class="modal-header">
+                    Thêm sản phẩm
+                </div>
+                <div class="modal-content">
+                    <div class="form-group">
+                        <label for="">Tên sản phẩm</label>
+                        <input  id="productName" type="text" placeholder="Tên sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Giá sản phẩm</label>
+                        <input id="price" type="text" placeholder="Giá sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Màn hình</label>
+                        <input id="screen" type="text" placeholder="Màn hình">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Camera sau</label>
+                        <input id="backCamera" type="text" placeholder="Camera sau">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Camera trước</label>
+                        <input id="frontCamera" type="text" placeholder="Camera trước">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Ảnh sản phẩm</label>
+                        <input id="img" type="text" placeholder="Ảnh sản phẩm">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Mô tả sản phẩm</label>
+                        <textarea id="decs" class="form-control" id="MoTa" cols="10" rows="10"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Loại sản phẩm</label>
+                        <input id="type" type="text" placeholder="Loại sản phẩm">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success">Thêm</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //Popup -->
+    <!-- /OverPlay -->
+    <div class="overplay"></div>
+    <!-- //OverPlay -->
+    <div class="content" id="list-product">
+
+    </div>
+
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="../js/popup.js"></script>
+</body>
+
+</html>

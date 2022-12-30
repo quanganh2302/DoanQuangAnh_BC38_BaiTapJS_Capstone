@@ -1,4 +1,5 @@
-@import "../Componentes/button";
+@import "../Components/button";
+@import "../Components/popup";
 
 // --> Header
 // --> Top header
@@ -501,7 +502,7 @@
   left: 50%;
   width: 970px;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 20;
   display: none;
   .popup {
     position: relative;
@@ -583,21 +584,17 @@
     }
   }
 }
-.modalPop.show {
-  display: block;
-}
 .overplay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
+  height: 100%;
   background-color: #000;
   opacity: 0.6;
   display: none;
-}
-.overplay.show{
-  display: block;
+  z-index: 9;
 }
 // --> Footer
 .footer {
@@ -780,3 +777,4 @@
   // Footer Note <--
 }
 // Footer <--
+

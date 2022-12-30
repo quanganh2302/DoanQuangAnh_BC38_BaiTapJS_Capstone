@@ -1,0 +1,10 @@
+body.show{
+    overflow-y: hidden;
+    transition: none;
+    .modalPop{
+      display: block;     
+    }
+    .overplay{
+      display: block;
+    }
+}

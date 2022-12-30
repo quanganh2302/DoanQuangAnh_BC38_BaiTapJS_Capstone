@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../css/main.min.css" />
 </head>
 
-<body>
+<body id="popup">
     <!-- /Header -->
     <header class="header">
         <div class="top-header">
@@ -80,10 +80,10 @@
                     <div class="col-lg-auto col-md-4 col-3 header-control">
                         <ul>
                             <li class="login">
-                                <a href="#">
+                                <a href="./admin.html">
                                     <i class="fa fa-user"></i>
-                                    <span class="text-color-di">login</span>
-                                    <span>login/register</span>
+                                    <span class="text-color-di">admin</span>
+                                    <span>admin account</span>
                                 </a>
                             </li>
                             <li class="wishlist">
@@ -700,7 +700,7 @@
     </section>
     <!-- //Content -->
     <!-- /Popup -->
-    <div id="popup" class="modalPop">
+    <div class="modalPop">
         <section class="popup">
             <div onclick="closeModal()" class="btn-close">
                 <a href="">
@@ -735,7 +735,7 @@
     </div>
     <!-- //Popup -->
     <!-- /OverPlay -->
-    <div id="popup" class="overplay"></div>
+    <div class="overplay"></div>
     <!-- //OverPlay -->
     <!-- /Footer -->
     <footer class="footer">
@@ -918,7 +918,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Popup -->
     <script src="../js/popup.js"></script>
-    <script src=""></script>
+    <!-- Models Products Js -->
+    <script src="../js/Models/products.js"></script>
 </body>
 
 </html>
