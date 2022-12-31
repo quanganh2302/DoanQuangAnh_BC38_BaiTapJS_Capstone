@@ -8,7 +8,7 @@ var productService = {
     });
   },
 
-  fetchProducts: function () {
+  fetchProduct: function () {
     return axios({
       url: "https://6395e80290ac47c680774914.mockapi.io/products",
       method: "GET",

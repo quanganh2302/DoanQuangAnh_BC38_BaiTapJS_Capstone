@@ -949,6 +949,15 @@ body.show .overplay {
   border: 1px solid #a4a4a4;
   box-shadow: none;
 }
+.modalPop .modal-form .modal-content .form-group select {
+  border: 1px solid #a4a4a4;
+  border-radius: 5px;
+  padding: 10px;
+}
+.modalPop .modal-form .modal-content .form-group select:focus {
+  border: 1px solid #a4a4a4;
+  outline: none;
+}
 .modalPop .modal-form .modal-footer {
   margin-top: 15px;
 }
