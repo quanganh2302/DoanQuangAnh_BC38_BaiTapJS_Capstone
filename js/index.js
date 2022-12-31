@@ -3,7 +3,8 @@ let productList = [];
 // Create Product
 
 async function createProduct() {
-  let name = document.getElementById("name").value;
+  let id = "";
+  let productName = document.getElementById("productName").value;
   let price = +document.getElementById("price").value;
   let screen = document.getElementById("screen").value;
   let backCamera = document.getElementById("backCamera").value;
@@ -13,7 +14,8 @@ async function createProduct() {
   let type = document.getElementById("type").value;
 
   let product = new Product(
-    name,
+    id,
+    productName,
     price,
     screen,
     backCamera,
@@ -22,6 +24,7 @@ async function createProduct() {
     desc,
     type
   );
+
   //Post Request to Database
   let promise = productService.createProduct(product);
   try {
@@ -45,39 +48,37 @@ async function fetchProductList() {
     productList = mapProductList(res.data);
     renderProduct();
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   } finally {
     // document.getElementById("loader").style.display = "none";
   }
 }
 
 window.onload = async function () {
-    await fetchProductList(); 
-  };
+  await fetchProductList();
+};
 
-  function mapProductList(local) {
-    let result = [];
-  
-    for (let i = 0; i < local.length; i++) {
-      let oldProduct = local[i];
-      let newProduct = new Product(
-        oldProduct.id,
-        oldProduct.name,
-        oldProduct.price,
-        oldProduct.screen,
-        oldProduct.backCamera,
-        oldProduct.frontCamera,
-        oldProduct.img,
-        oldProduct.desc,
-        oldProduct.type
-      );
-      result.push(newProduct);
-    }
-  
-    return result;
+function mapProductList(local) {
+  let result = [];
+
+  for (let i = 0; i < local.length; i++) {
+    let oldProduct = local[i];
+    let newProduct = new Product(
+      oldProduct.id,
+      oldProduct.productName,
+      oldProduct.price,
+      oldProduct.screen,
+      oldProduct.backCamera,
+      oldProduct.frontCamera,
+      oldProduct.img,
+      oldProduct.desc,
+      oldProduct.type
+    );
+    result.push(newProduct);
   }
 
-
+  return result;
+}
 
 //Render product list
 function renderProduct(data) {
@@ -87,19 +88,23 @@ function renderProduct(data) {
   for (let i = 0; i < data.length; i++) {
     html += `<tr>
                   <td>${data[i].id}</td>
-                  <td>${data[i].name}</td>
+                  <td>${data[i].productName}</td>
                   <td>${data[i].price}</td>
-                  <td> <img src="${data[i].img}" alt=""> </td>
+                  <td class: "img-product" > <img style = "height: 100px; object-fit: contain;" src="${data[i].img}" alt=""> </td>
                   <td>${data[i].desc}</td>
                   <td>
                     <button 
                       onclick="deleteProduct('${data[i].productId}')" 
-                      class="btn btn-danger">Xoá</button>
+                      class="btn-custom btn btn-danger">Xoá</button>
                     <button 
                       onclick="getUpdateProduct('${data[i].productId}')"  
-                      class="btn btn-info">Sửa</button>
+                      class="btn btn-info btn-custom">Sửa</button>
                   </td>
               </tr>`;
   }
   document.getElementById("displayProductList").innerHTML = html;
+}
+
+function deleteProduct(id){
+  
 }

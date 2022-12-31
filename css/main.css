@@ -971,3 +971,8 @@ body.show .overplay {
   overflow: auto;
   scroll-behavior: auto;
 }
+
+.btn-custom {
+  width: 100%;
+  height: 45px;
+}
